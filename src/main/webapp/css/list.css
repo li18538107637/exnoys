@@ -1,0 +1,53 @@
+.list-ul{
+    list-style: none;
+    -webkit-margin-before: -.7em;
+    -webkit-padding-start: 0px;
+}
+.li_span{
+    overflow: hidden;
+    font-size: 70%;
+    display: inline-block;
+    width: 80%;
+    height: 35px;
+    position: absolute;
+    top: .4rem;
+    left: 2.5rem;
+    padding: 0 .2rem;
+    text-align: left;
+}
+.li_num{
+	display:inline-block;
+	width:8%;
+	height:100%;
+	
+}
+.list-ul li{
+    height: 9%;
+    margin: 3% 1%;
+    background: #fff;
+    color: #415065;
+    border:solid 1px #415065;
+    border-radius: 4px;
+    padding: .1rem .1rem;
+}
+
+.li_div{
+    padding: .3rem .7rem;
+    position: relative;
+}
+.del_img{
+	position: absolute;
+    right: .5rem;
+    width: 20px;
+    bottom: .6rem;
+    height: 20px;
+	
+	}
+.edit_img{
+	position: absolute;
+    right: 2.55rem;
+    width: 20px;
+    bottom:.6rem;
+    height: 20px;
+	
+	}

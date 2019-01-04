@@ -1,0 +1,27 @@
+.content-detail {
+	padding: 1rem .1rem;
+	overflow-x: hidden;
+	height: 94%;
+	width: 100%;
+	overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.top_btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #415065;
+	position: fixed;
+	right: 40px;
+	bottom: 60px;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	z-index: 9999;
+	outline: none;
+	display: none;
+}

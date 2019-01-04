@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.anying.dao.QueryDao">
+	<resultMap id="highlander" type="com.anying.entity.Highlander">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="title" jdbcType="VARCHAR" property="title" />
+		<result column="details" jdbcType="BLOB" property="details"
+			typeHandler="org.apache.ibatis.type.BlobTypeHandler" />
+		<result column="create_time" jdbcType="VARCHAR" property="create_time" />
+		<result column="modify_time" jdbcType="VARCHAR" property="modify_time" />
+		<result column="cur_type" jdbcType="VARCHAR" property="curType" />
+		<result column="is_open" jdbcType="VARCHAR" property="isOpen" />
+	</resultMap>
+	<sql id="customSQl">
+	    <if test="curType != null and curType != ''">
+		and cur_type =#{curType}
+		</if>
+		<if test="search != null and search != ''">
+		and title LIKE CONCAT('%',#{search},'%')
+		</if>
+	    <if test="isOpen != null and isOpen != ''">
+		and is_open= #{isOpen}
+		</if>
+	
+	</sql>
+	
+	<select id="getTotal" parameterType="String" resultType="java.lang.Integer">
+		SELECT
+		count(*) FROM
+		FIORA_HIGHLANDER
+		WHERE
+		1=1
+		<include refid="customSQl"/>
+	</select>
+
+	<select id="getList" resultMap="highlander">
+		SELECT
+		id,
+		title, 
+		CUR_TYPE
+		FROM
+		FIORA_HIGHLANDER WHERE
+	    1=1
+		<include refid="customSQl"/>
+		ORDER BY CREATE_TIME DESC LIMIT
+		#{startPage},8 
+	</select>
+
+	<select id="getDetail" parameterType="String" resultMap="highlander">
+		SELECT
+		title,details,cur_type FROM FIORA_HIGHLANDER WHERE
+		id=#{0}
+	</select>
+
+</mapper>

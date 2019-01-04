@@ -1,0 +1,116 @@
+ .playContent{
+	position: relative;
+	height: auto;
+	overflow: hidden;
+	background:#000;
+	cursor: pointer;
+}
+
+ .playControll{
+	position: absolute;
+	z-index: 2147483647;
+	width: 99%;
+	height: 48px;
+	bottom: 10px;
+	border-radius: 0px 0px 3px 3px;
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;   
+}
+ .fullControll{
+	background:rgba(0,0,0,.5);
+}
+ .fullControll .timebar span{
+	color: #FFFFFF;
+}
+
+ .playControll .timebar{
+float: left;
+width: calc(100% - 145px);
+line-height: 48px;
+overflow: hidden;
+margin: 0 auto;
+margin: 0px 0px 0px 40px;
+color: #fff;
+}
+ .playControll .timebar .progress{
+	float: left;
+	width: 80%;
+	margin: 19px 5px;
+	height: 10px;
+	cursor: pointer;
+}
+ .playControll .timebar span{
+	float: left;
+	width: 8%;
+	text-align: center;
+}
+ .otherControl{
+	float: right;
+	position: relative;
+}
+
+ .otherControl span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 20px;
+	margin: 9px  7px;
+	/*background: url(../images/control_01.png) no-repeat;*/
+	cursor: pointer;
+}
+
+ .otherControl span:nth-child(2){
+	color: #919597;
+}
+ .otherControl .volumeBar{
+	display: none;
+	position: absolute;
+	top: -110px;
+	left:4px;
+	width: 26px;
+	height: 100px;
+	background:rgba(65,80,101,1);
+	border-radius: 4px;
+	cursor: pointer;
+}
+ .otherControl .volumeBar:after{
+	content:"";
+	display: block;
+	position:absolute;
+	bottom: -7px;
+	left: 5px;
+	width: 0;
+    height: 0;
+    border-left:8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(65,80,101);
+}
+ .otherControl .volumeBar .volumewrap{
+	background: #fff;
+	width: 9px;
+	height: 80px;
+	position: absolute;
+	bottom: 10px;
+	left: 9px;
+	border-radius: 4px;
+	border: solid 1px #fff;
+}
+
+ .otherControl .volumeBar .progress{
+	background: #fff;
+}
+ .otherControl .volumeBar .progress-bar{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-radius: 4px;
+}
+video::-webkit-media-controls-enclosure {
+    /*绂佺敤鎾斁鍣ㄦ帶鍒舵爮鐨勬牱寮�/
+    display: none !important;
+}
+:-webkit-full-screen{}

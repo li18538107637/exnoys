@@ -1,0 +1,64 @@
+body{
+margin:0;
+padding:0;
+}
+.login_box{
+position: absolute;
+width: 600px;
+height: 60px;
+}
+.login_input{
+background: url(../loginImg/person.png) no-repeat;
+background-size: 30px 30px;
+background-color:rgba(0,128,128,0);
+outline: none;
+border: none;
+box-shadow: 0 5px 2px -3px #fff;
+text-shadow: 1px 1px 10px #fff;
+position: absolute;
+top: 0px;
+left: 25%;
+width: 50%;
+color: #fff;
+font-size: 1.1rem;
+text-align:center;
+padding-bottom: .4rem;
+height:40px;
+-webkit-filter: drop-shadow(0 0 15px #fff);
+filter: drop-shadow(0 0 15px #fff);
+font-style: italic;
+}
+::-webkit-input-placeholder { 
+    color:#fff;
+	text-shadow: 1px 1px 10px #fff;
+}
+
+.cr_div{
+position:absolute;
+bottom:35px;
+color: #fff;
+text-shadow: 1px 1px 10px #fff;
+font-weight:600;
+font-size:1rem;
+width:100%;
+text-align: center;
+}
+
+.audio_img{
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+	z-index:9999;
+	cursor: pointer;
+}
+.error_msg{
+color: #fff;
+text-shadow: 1px 1px 10px #fff;
+font-size: 1.1rem;
+float: right;
+line-height: 50px;
+display: inline-block;
+}
+
+
